@@ -3,15 +3,14 @@
 	"id": "skye-carpet-addons",
 	"version": "${version}",
 	"name": "skye-carpet-addons",
-	"description": "This is an example description! Tell everyone what your mod is about!",
+	"description": "My own personal carpet mod extension, adding rules to aid with skyblock progression",
 	"authors": [
 		"Skye"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"sources": "https://github.com/FubyCutie/SkyeCarpetAddons"
 	},
-	"license": "CC0-1.0",
+	"license": "GPLv3",
 	"icon": "assets/skye-carpet-addons/icon.png",
 	"environment": "*",
 	"entrypoints": {

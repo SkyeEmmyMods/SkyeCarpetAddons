@@ -2,13 +2,8 @@ package uk.fuby.skyecarpetaddons
 
 import carpet.CarpetExtension
 import carpet.CarpetServer
-import com.google.gson.Gson
-import com.google.gson.GsonBuilder
-import com.google.gson.reflect.TypeToken
-import kotlinx.serialization.InternalSerializationApi
 import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.decodeFromJsonElement
-import kotlinx.serialization.json.internal.readJson
 import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
 import java.io.File
