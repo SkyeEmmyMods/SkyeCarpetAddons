@@ -3,7 +3,7 @@
 	"package": "uk.fuby.skyecarpetaddons.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-      "TestMixin"
+      "ThunderRitualMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1

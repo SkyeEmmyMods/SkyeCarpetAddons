@@ -7,8 +7,8 @@ object Options {
 
     @JvmField
     @Rule(
-        categories = [RuleCategory.EXPERIMENTAL]
+        categories = [RuleCategory.FEATURE]
     )
-    var testOption = false
+    var thunderRitual = false
 
 }
