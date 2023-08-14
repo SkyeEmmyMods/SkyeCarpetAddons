@@ -11,4 +11,10 @@ object Options {
     )
     var thunderRitual = false
 
+    @JvmField
+    @Rule(
+        categories = [RuleCategory.FEATURE]
+    )
+    var traderRitual = false
+
 }
