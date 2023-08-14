@@ -6,7 +6,6 @@ import kotlinx.serialization.json.Json
 import kotlinx.serialization.json.decodeFromJsonElement
 import net.fabricmc.api.ModInitializer
 import org.slf4j.LoggerFactory
-import java.io.File
 import java.io.IOException
 
 
@@ -31,11 +30,8 @@ object SkyeCarpetAddons : ModInitializer, CarpetExtension {
 
 	private fun getTranslationFromResourcePath(lang: String?): MutableMap<String, String> {
 		lang ?: return mutableMapOf()
-		val langFilePath = this.javaClass.classLoader.getResource("assets/skye-carpet-addons/lang/$lang.json")?.path
-		langFilePath ?: return mutableMapOf()
-		val langFile = File(langFilePath)
-		println(langFile.toPath())
-		if (!langFile.exists() || langFile.isDirectory) return mutableMapOf()
+		val langFile = this.javaClass.classLoader.getResource("assets/skye-carpet-addons/lang/$lang.json")
+		langFile ?: return mutableMapOf()
 		val jsonData: String = try {
 			langFile.readText()
 		} catch (e: IOException) {
