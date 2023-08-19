@@ -3,7 +3,8 @@
 	"package": "uk.fuby.skyecarpetaddons.mixin",
 	"compatibilityLevel": "JAVA_17",
 	"mixins": [
-		"ItemRitualMixin"
+		"ItemRitualMixin",
+		"MinecartMixin"
 	],
 	"injectors": {
 		"defaultRequire": 1
