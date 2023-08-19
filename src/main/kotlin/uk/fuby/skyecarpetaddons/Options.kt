@@ -17,4 +17,9 @@ object Options {
     )
     var traderRitual = false
 
+    @JvmField
+    @Rule(
+        categories = [RuleCategory.FEATURE]
+    )
+    var fastMinecarts = false
 }
