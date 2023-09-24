@@ -36,7 +36,7 @@ public abstract class MinecartMixin extends Entity {
 
     private boolean isEligibleForFastCart(BlockPos pos, BlockState state) {
         if(!Options.fastMinecarts) return false;
-        if(!world.getBlockState(pos.offset(Direction.DOWN)).isOf(Blocks.SMOOTH_STONE)) return false;
+        if(!getWorld().getBlockState(pos.offset(Direction.DOWN)).isOf(Blocks.SMOOTH_STONE)) return false;
         if(this.isTouchingWater()) return false;
         if (state.isOf(Blocks.RAIL) || (state.isOf(Blocks.POWERED_RAIL) && state.get(PoweredRailBlock.POWERED))) {
             RailShape shape = state.get(((AbstractRailBlock)state.getBlock()).getShapeProperty());
@@ -54,7 +54,7 @@ public abstract class MinecartMixin extends Entity {
             int y = MathHelper.floor(this.getY());
             int z = MathHelper.floor(this.getZ());
             BlockPos railPos = new BlockPos(x, y, z);
-            BlockState railState = this.world.getBlockState(railPos);
+            BlockState railState = this.getWorld().getBlockState(railPos);
             if(!isEligibleForFastCart(railPos, railState)) break;
             fastCartMoveOnRail(railPos, railState);
         }
@@ -133,15 +133,15 @@ public abstract class MinecartMixin extends Entity {
                 double aa = vec3d5.x;
                 double ab = vec3d5.z;
                 if (bl) {
-                    if (this.world.getBlockState(pos.west()).isSolidBlock(this.world, pos.west())) {
+                    if (this.getWorld().getBlockState(pos.west()).isSolidBlock(this.getWorld(), pos.west())) {
                         aa = 0.02;
-                    } else if (this.world.getBlockState(pos.east()).isSolidBlock(this.world, pos.east())) {
+                    } else if (this.getWorld().getBlockState(pos.east()).isSolidBlock(this.getWorld(), pos.east())) {
                         aa = -0.02;
                     }
                 } else {
-                    if (this.world.getBlockState(pos.north()).isSolidBlock(this.world, pos.north())) {
+                    if (this.getWorld().getBlockState(pos.north()).isSolidBlock(this.getWorld(), pos.north())) {
                         ab = 0.02;
-                    } else if (this.world.getBlockState(pos.south()).isSolidBlock(this.world, pos.south())) {
+                    } else if (this.getWorld().getBlockState(pos.south()).isSolidBlock(this.getWorld(), pos.south())) {
                         ab = -0.02;
                     }
                 }
