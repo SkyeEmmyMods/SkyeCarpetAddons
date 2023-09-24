@@ -53,7 +53,7 @@ object Options {
                     if (it.toDouble() in -0.1..0.1) {
                         return newValue
                     }
-                    Messenger.m(source, "Values must be in range -0.1 to 0.1")
+                    Messenger.m(source, "r Values must be in range -0.1 to 0.1")
                 } catch (_: NumberFormatException) {}
             }
             return null
@@ -87,22 +87,22 @@ object Options {
                 if (index == 0) {
                     try {
                         if (value.toDouble() !in -0.2033650..0.2033650) {
-                            Messenger.m(source, "First value must be in range -0.2033650 to 0.2033650")
+                            Messenger.m(source, "r First value must be in range -0.2033650 to 0.2033650")
                             return null
                         }
                     } catch (_: NumberFormatException) {
-                        Messenger.m(source, "Invalid numbers, must be in format 123.456")
+                        Messenger.m(source, "r Invalid numbers, must be in format 123.456")
                         return null
                     }
                 }
                 else {
                     try {
                         if (value.toDouble() !in -0.1033650..0.1033650) {
-                            Messenger.m(source, "Second and third value must be in range -0.1033650 to 0.1033650")
+                            Messenger.m(source, "r Second and third value must be in range -0.1033650 to 0.1033650")
                             return null
                         }
                     } catch (_: NumberFormatException) {
-                        Messenger.m(source, "Invalid numbers, must be in format 123.456")
+                        Messenger.m(source, "r Invalid numbers, must be in format 123.456")
                         return null
                     }
                 }
