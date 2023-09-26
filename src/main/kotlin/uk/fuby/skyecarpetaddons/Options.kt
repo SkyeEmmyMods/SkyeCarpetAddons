@@ -55,6 +55,7 @@ object Options {
                         return null
                     }
                 } catch (_: NumberFormatException) {
+                    Messenger.m(source, "r Invalid numbers, must be in format 123.456")
                     return null
                 }
             }
