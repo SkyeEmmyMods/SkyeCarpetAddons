@@ -50,13 +50,15 @@ object Options {
 
             newValue.split(" ").forEach {
                 try {
-                    if (it.toDouble() in -0.1..0.1) {
-                        return newValue
+                    if (it.toDouble() !in -0.1..0.1) {
+                        Messenger.m(source, "r Values must be in range -0.1 to 0.1")
+                        return null
                     }
-                    Messenger.m(source, "r Values must be in range -0.1 to 0.1")
-                } catch (_: NumberFormatException) {}
+                } catch (_: NumberFormatException) {
+                    return null
+                }
             }
-            return null
+            return newValue
         }
     }
 
